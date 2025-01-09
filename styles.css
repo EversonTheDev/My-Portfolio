@@ -1,0 +1,874 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0D1117;
+    font-family: 'Raleway', sans-serif;
+    color: #F8F9FA;
+    line-height: 1.95;
+}
+h1, h2, h3, h4, h5{
+    font-family: 'Poppins', sans-serif;
+}
+
+.sections-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/*--------------- HEADER -------------- */
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #6C63FF;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+.navbar{
+    font-size: 1.2rem;
+    display: flex;
+    position: relative;
+}
+header .brand{
+    display: inline-block;
+    align-self: center;
+    font-size: 1.7rem;
+}
+header .brand a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.navbar li{
+    list-style-type: none;
+    display: inline-block;
+}
+.navbar a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 16px;
+    color: white; 
+}
+
+header .nav-toggle{
+    display: none;
+    align-self: center;
+    padding: 6px;
+    height: 45px; width: 45px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #0D1117;
+    color: white;
+    box-shadow: 0 0 2px black;
+}
+
+/* ----------------HOME PAGE----------------- */
+
+.home-page .home-container{
+    max-width: fit-content;
+    margin: 0 100px;
+    padding-top: 5rem;
+}
+
+.home-page .intro{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+}
+
+.home-page .intro .text-content{
+    align-self: center;
+}
+.home-page .intro .image{
+    max-width: 500px;
+    border-radius: 50%;
+    border: 5px solid #6C63FF;
+    margin-left: 50px;
+}
+
+.home-page h2.h2{
+    font-size: clamp(2rem, 4vw, 5rem);
+    color: #6C63FF;
+    margin-bottom: -50px;
+    line-height: 1.2;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.home-page .intro h1{
+    margin-left: 1.9px;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+.home-page .intro h2{
+    margin: -8px 0;
+}
+.home-page .intro h2:not(.h2){
+    padding-left: 5px;
+}
+.home-page .intro p{
+    padding-left: 5px;
+}
+.home-page .intro .button button{
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    margin-top: 4rem;
+    border-radius: 50px;
+    border: none;
+    background-color: #6C63FF;
+    font-weight: 600;
+}
+.intro .image img{
+    width: 100%; height: 100%;
+    border-radius: 50%;
+}
+
+.home-page .intro .button button:hover{
+    background-color: #191742;
+    color: #e7e7e7;
+    scale: 1.1;
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+}
+
+/* -------------ABOUT PAGE------------------ */
+#about-page{
+    padding: 50px;
+    font-size: 1.1rem;
+    background-color: #0b0d10;
+    position: relative;
+    width: 100%;  
+}
+#about-page .flex-container h2{
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #6C63FF;
+}
+
+#about-page .outer-flex{  
+    padding: 0 px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+#about-page .flex-container{
+    display: flex;
+    gap: 4rem;
+}
+
+.flex-container .about-me-text p{
+    max-width: 60ch;
+}
+
+.flex-container .about-me-text button{
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 1.1rem;
+    margin-top: 3rem;
+    border-radius: 50px;
+    border: none;
+    background-color: #6C63FF;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.flex-container .about-me-text span{
+    padding-left: 8px;
+}
+
+.flex-container .about-me-text a{
+    text-decoration: none;
+}
+
+#about-page .flex-container .image{
+    width: 450px; height: 450px;
+    position: relative;
+    margin-right: 20px;
+}
+
+#about-page .flex-container .image img{
+    width: 100%; height: 100%;
+    position: relative;
+    z-index: 2;
+    filter: contrast(1.2) brightness(0.9) sepia(0.3);  
+}
+.flex-container .image-frame{
+    width: 100%; height: 100%;   
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    box-shadow: inset 5px 5px 35px 3px RGB(139, 69, 19), 0 0 3px  white;
+    backdrop-filter: blur(10px) brightness(1.1);
+}
+
+.flex-container .about-me-text button svg{
+    transition: .5s linear;
+}
+.flex-container .about-me-text button:hover svg{
+    position: relative;
+    z-index: 0;
+    transform: translate(50px);
+}
+.flex-container .about-me-text button:hover{
+    box-shadow: 0 0 2px 2px white;
+    scale: 1.1;
+}
+
+/* ---------------------PROJECTS PAGE--------------  */
+/* N/B: I changed flex-container to a grid layout */
+.my-projects{
+    max-width: 100vw;
+}
+.my-projects .outer-container{
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+    padding: 0 100px;
+    max-width: 100vw;
+}
+
+.my-projects .outer-container h2{
+    margin-bottom: 2rem;
+    font-size: 40px;
+    color: #6C63FF;
+    text-align: center;
+}
+
+.my-projects .grid-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.my-projects .flex-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.my-projects .flex-container .card {
+    box-shadow: 5px 5px 3px black;
+    border-radius: 5px;
+    background-color: #0b0d10;
+    padding: 2rem;
+    max-height: 550px;
+}
+
+.my-projects .flex-container .card h3{
+    color: #6C63FF;
+    font-size: 1.7rem;
+}
+
+.my-projects .flex-container .card p{
+    max-width: 50ch; min-width: 29ch;
+    height: 100px;
+}
+
+.my-projects .flex-container .card .image{
+    width: 100%;
+    margin-bottom: 1rem;
+    max-height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px white;
+}
+
+.my-projects .flex-container .card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.my-projects .flex-container .card .card-text .button button{
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 1.1rem;
+    margin-top: 5rem;
+    border-radius: 50px;
+    border: none;
+    background-color: #6C63FF;
+    font-weight: 600;
+}
+
+.my-projects .flex-container .card .card-text .button a{
+    text-decoration: none;
+}
+
+.my-projects .flex-container .card .card-text .button button:hover{
+    box-shadow: 0 0 3px 1px white;
+    scale: 1.1;
+}
+
+.my-projects .flex-container .card img:hover{
+    scale: 1.1;
+}
+
+/*---------------------SKILLS PAGE-------------- */
+.my-skills{
+    font-size: 1.2rem;
+    padding: 3rem 100px;
+    padding-top: 4rem;
+    background-color: #13171e;
+    width: 100%;       
+    max-width: 100vw;  
+}
+.my-skills .skills-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.my-skills .skills-container h2{
+    margin-bottom: .5rem;
+    font-size: 40px;
+    color: #6C63FF;
+    text-align: center;
+}
+.my-skills .skills-container p{
+    margin-bottom: 2rem;
+    max-width: 150ch;
+}
+
+.my-skills .skills-container .grid-container h3{
+    font-size: 30px;
+    color: #6C63FF;
+    margin-bottom: .8rem;
+}
+
+.my-skills .grid-container .stack{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.my-skills .grid-container .category{
+    margin-bottom: 2.8rem;
+}
+
+.my-skills .grid-container .box{
+    width: 250px; 
+    height: 250px;
+    background-color: #0b0d10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 3px black;
+}
+
+.my-skills .grid-container .box .image{
+    width: 130px; height: 130px;
+    margin-bottom: 20px;
+    margin-top: 39px;
+}
+
+.my-skills .grid-container .box .image img{
+    width: 100%; height: 100%;
+    transition: .8s linear;
+}
+
+.my-skills .grid-container .box .image:hover img{
+    transform: scale(1.1);
+}
+
+/*---------------------CONTACT ME PAGE-------------- */
+.contact-me{
+    font-size: 1.1rem;
+    padding: 3.2rem 0;
+}
+
+.contact-me .container{
+    margin: 0 100px;
+    padding-bottom: 2rem;
+}
+
+.contact-me .container .form-et-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.contact-me .container h2{
+    margin-bottom: 2rem;
+    font-size: 40px;
+    color: #6C63FF;
+    text-align: center;
+}
+
+.contact-me .container .contact-form{
+    max-width: 500px; min-width: 468px;
+    background-color: #050b13;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 3px black;
+}
+
+.contact-me .container .contact-form form{
+    width: 100%;
+    border: 3px dotted rgb(169, 169, 169);
+    padding: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.contact-me .container .contact-form input, .contact-me .container .contact-form textarea{
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    outline: none;
+    border: none;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-me .container .contact-form button{
+    background-color: #CCCCCC;
+    padding: 8px 10px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.contact-me .container .contact-form textarea{
+    height: 6rem;
+}
+
+.contact-me .container .form-et-content .text-content p{
+    max-width: 60ch;
+    min-width: 40ch;
+    margin-bottom: 1rem;
+}
+.contact-me .container .form-et-content .text-content h3{
+    margin-bottom: .5rem;
+    font-size: 25px;
+    color: #6C63FF;
+}
+.contact-me .container .form-et-content .text-content a{
+    color: #58a6ff;
+}
+.contact-me .container .form-et-content .text-content i{
+    color: rgb(178, 178, 178);
+    margin-right: 5px;
+}
+
+.contact-me .container .form-et-content .text-content a:hover{
+    color: #551A8B;
+}
+
+.contact-me .container .contact-form button:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+/*--------------------- FOOTER -------------- */
+.footer{
+    background-color: black;
+}
+
+.footer .footer-container{
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer .social-media-icons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer .social-media-icons a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.footer .social-media-icons .icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px grey;
+    text-align: center;
+    margin: 0 8px;
+    margin-bottom: 7px;
+}
+
+.footer .social-media-icons .icon i{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+
+.footer .social-media-icons .icon .hidden{
+    display: none;
+}
+
+.footer .social-media-icons .twitter-icon i{
+    background-color: black;
+    color: white;  
+}
+
+.footer .social-media-icons .github-icon i{
+    background-color: white;
+    color: black;
+}
+
+.footer .social-media-icons .linkedin-icon i{
+    background-color: #0072B1;
+}
+
+.footer .social-media-icons .instagram-icon i{
+    background: linear-gradient(45deg, #F58529, #FEDA77, #DD2A7B, #8134AF, #515BD4);
+}
+
+.footer .social-media-icons .discord-icon i{
+    background-color: #7289DA;
+}
+
+.footer .social-media-icons a:hover .icon{
+    box-shadow: 0 0 3px 2px white;
+}
+
+/* Media queries */
+@media (max-width: 1200px){
+    .my-projects .flex-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+    
+}
+
+@media (max-width: 1150px){
+    .home-page .intro .image{
+        margin-left: 0px;
+    }
+
+    .flex-container .about-me-text button{
+        margin-top: 2rem;
+    }
+
+    .my-projects .flex-container{
+        margin: 0 50px;
+    }
+
+    /*------------CONTACT PAGE-------------- */
+    .contact-me .container .contact-form{
+        min-width: 300px;
+        max-width: 400px;
+    }
+
+    .contact-me .container .form-et-content .text-content p{
+        max-width: 40ch;
+        min-width: 25ch;
+    }
+
+    .contact-me .container{
+        margin: 2rem 0px;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 900px){
+    header{
+        padding: 0 42px;
+    }
+
+    header .navbar{
+        display: none;
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 53.5px;
+        right: 0.5px;
+        width: 200px; 
+        border-radius: 0 0 5px 5px;
+    }
+
+    header .nav-toggle{
+        display: block;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a{
+        display: block;
+        padding: .5rem 24px;
+    }
+
+    .navbar li{
+        display: block;
+    }
+
+    .navbar a:hover{
+        background-color: #656565;
+        text-decoration: none;
+    }
+
+    .home-page .home-container{
+        max-width: fit-content;
+        margin: 0 40px;
+    }
+
+    .home-page .intro .image{
+        height: 450px;
+    }
+
+    .home-page .intro h2:not(.h2, h1){
+        font-size: 25px;
+        margin-top: 12px;
+    }
+
+    .home-page .intro .button button{
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        margin-top: 2.5rem;
+        border-radius: 50px;
+        border: none;
+        background-color: #6C63FF;
+        font-weight: 600;
+    }
+
+    /* -----------ABOUT PAGE------------ */
+    #about-page .outer-flex{  
+       margin: 3rem 0;
+    }
+
+    .contact-me .container .form-et-content{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .contact-me .container .form-et-content .text-content{
+        grid-row: 1/2;
+    }
+}
+
+@media (max-width: 770px){
+    /* ------HOME PAGE------ */
+    .home-page .home-container{
+        margin-bottom: 30px;
+    }
+
+    .home-page .intro{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .home-page .intro .image{
+        grid-row: 1/2;
+        justify-self: center;
+    }
+
+    .home-page h2.h2{
+        font-size: 2.5rem;
+    }
+
+    /* ------ ABOUT PAGE ---------- */
+    #about-page .flex-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        text-align: center;
+    }
+    
+    .flex-container .about-me-text p{
+        max-width: 70ch;
+    }
+
+    #about-page .flex-container h2{
+        position: absolute;
+        top: 60px;
+        left: calc(50% - 90px);
+    }
+
+    #about-page .flex-container .image{
+        width: 300px; height: 300px;
+        margin-top: 40px;
+    }
+
+    .flex-container .image-frame{
+        top: 6px;
+        left: 6px;
+    }
+
+    .flex-container .about-me-text a{
+        position: absolute;
+        left: calc(50% - 80px);
+        margin-bottom: 3rem;
+    }
+
+    .flex-container .about-me-text{
+        padding-bottom: 3rem;
+    }
+
+}
+
+@media (max-width: 750px){
+    *{
+        font-size: 1rem;
+    }
+    * h2, * h3{
+        font-size: 30px;   /* didnt work */
+        line-height: 1.2;
+    }
+
+    header .brand a{
+        margin: -6px 0;
+        font-size: 1.3rem;
+    }
+
+    header .nav-toggle{
+        padding: 4px;
+        height: 35px; width: 35px;
+        font-size: 1.1rem;      
+    }
+
+    .home-page .intro h2:not(.h2){
+        padding-bottom: 30px;
+    }
+
+    .my-projects .flex-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .my-skills .grid-container .box{
+        width: 200px; 
+        height: 200px;
+    }
+}
+
+@media (max-width: 550px){
+    header{
+        padding: 0 30px;
+    }
+
+    .flex-container .about-me-text button{
+        padding: 4px 10px;
+        font-size: 1rem;
+        border-radius: 50px;
+    }
+
+    .flex-container .about-me-text p{
+        margin-bottom: -10px;
+    }
+
+    .footer .social-media-icons{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
+
+    .footer .social-media-icons .icon{
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer .social-media-icons p{
+        display: none;
+    }
+
+    .footer .social-media-icons .icon i{
+        display: none;   
+    }
+    
+    .footer .social-media-icons .icon .hidden{
+        display: inline-block;
+        padding-top: 8px;
+    }
+}
+
+@media (max-width: 450px){
+    header{
+        padding: 0 25px;
+    }
+
+    .home-page .intro .image{
+        max-width: 300px; max-height: 350px;
+        border-radius: 50%;
+        border: 3px solid #6C63FF;
+        margin-left: 0px;
+    }
+
+    #about-page .flex-container .image{
+        width: 200px; height: 200px;
+        margin-top: 40px;
+    }
+
+    .flex-container .image-frame{
+        top: 4px;
+        left: 4px;
+    }
+
+    .contact-me .container .contact-form{
+        min-width: 200px;
+        max-width: 300px;
+    }
+
+    .contact-me .container .form-et-content .text-content p{
+        max-width: 30ch;
+    }
+}
+
+@media (max-width: 380px){
+    header{
+        padding: 0 20px;
+    }
+
+    .my-projects .flex-container .card{
+        max-width: 300px;
+    }
+
+    .my-projects .flex-container .card p{
+        min-width: 25ch;
+    }
+
+    .my-projects .flex-container .card .card-text .button{
+        margin-top: 5.8rem;
+    }
+}
+
+@media (max-width: 350px){
+    .my-projects .flex-container .card{
+        max-width: 270px;
+    }
+
+    .contact-me .container .contact-form{
+        max-width: 280px;
+    }
+
+    .contact-me .container .form-et-content .text-content{
+        margin-left: 25px;
+    }
+
+    .contact-me .container .form-et-content .text-content p{
+        max-width: 27ch;
+    }
+}

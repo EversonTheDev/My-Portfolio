@@ -1,0 +1,57 @@
+body{
+    padding: 0;
+    margin: 0;
+    line-height: 1.95;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.main-table{
+    padding-left: 10px;
+    margin: auto;
+}
+
+.half-star{
+    position: relative;
+    display: inline-block;
+}
+.half-star > .fa-star-half{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    color: gold;
+}
+.half-star > .hs1{
+    color: rgba(76, 76, 76, 0.08);
+}
+
+.fa-star{
+    color: gold;
+}
+
+.fa-star.empty{
+    color: rgba(76, 76, 76, 0.08);
+}
+
+caption{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    color: rgb(228, 189, 15);
+}
+
+.first-table{
+    margin-right: 50px;
+}
+
+.first-table  td:first-child{
+    padding-right: 100px;
+}
+.second-table td:first-child{
+    padding-right: 100px;
+}

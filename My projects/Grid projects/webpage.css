@@ -1,0 +1,401 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: white;
+}
+
+.body-content{
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.container{
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+}
+
+/* ---------------------- Header-------------------*/
+.container .header{
+    display: grid;
+    grid-template-columns: 2fr auto;
+    background-color: #161B22;
+    padding: 10px;
+    padding-left: 0px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .image-and-searchbar{
+    display: flex;
+}
+.header .image-and-searchbar img{
+    width: 50px; height: 37.33px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+.header .image-and-searchbar .search-bar{
+    display: inline-flex;
+    box-shadow: 0 0 1px white;
+    align-items: center;
+    background-color: #303339;
+    width: 40%;
+    min-width: 180px;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.header .image-and-searchbar .search-bar button{
+    background-color: inherit;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.header .buttons-and-icons button, .header .buttons-and-icons .icon{
+    margin: 0 5px;
+}
+.header .buttons-and-icons .icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+}
+.buttons-and-icons .icon .fa-message{
+    padding-top: 5px;
+}
+.header .buttons-and-icons button{
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    background-color: #6a4cbb;
+    color: initial;
+    font-weight: bold;
+}
+.header .image-and-searchbar input{
+    border: none;
+    width: 100%;
+    font-size: 1.1rem;
+    background-color: initial;
+    outline: none;
+    color: #fff;  
+}
+.header .image-and-searchbar input::placeholder {
+    font-family: 'System UI', sans-serif; 
+    font-style: italic;
+} 
+.image-and-searchbar, form{
+    width: 100%;
+}
+
+.header  button:hover{
+   background-color: #3d2786;
+}
+
+.header .buttons-and-icons .icon:hover{
+    box-shadow: inset 0 0 1px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header .image-and-searchbar .search-bar button:hover{
+    background-color: rgba(47, 58, 178, 0.2);
+}
+.header .image-and-searchbar .search-bar button:hover svg{
+    color: rgba(47, 58, 178, 1);
+}
+
+/*----------------------------------------------------------- */
+
+
+.container .grid-body{
+    display: grid;
+    grid-template-columns: minmax(200px, 21.5%) 50% 28%;
+    background-color: #0D1117;
+    color: #fff;
+}
+
+
+/* ---------------------- Side Bar-------------------*/
+.grid-body .side-bar{
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bar img{
+    width: 18px;
+}
+.side-bar img.big{
+    width: 19px;
+}
+
+.side-bar ul{
+    width: 100%;
+    padding-bottom: 30%;
+    padding-top: 10px;
+}
+.side-bar li{
+    list-style-type: none;
+}
+.side-bar a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    
+}
+.side-bar .more{
+    display: block;
+    height: 100%;
+    padding-left: 26px;
+    color: rgb(103, 101, 101)
+}
+.side-bar span{
+    display: inline-block;
+    padding-right: 6px;
+    padding: 10px 20px;
+}
+
+.side-bar .side-bar-tags div{
+   padding: 8px 0;
+   padding-left: 20px;
+}
+.side-bar-tags div:first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.side-bar .side-bar-tags span{
+    padding-right: 25px;
+    padding-top: 14px;
+}
+.side-bar-tags .my-tag{
+    font-weight: 600;
+}
+
+.grid-body .side-bar a:hover{
+    background-color: #505357;
+    text-decoration: underline;
+    color: #551A8B;
+}
+.side-bar .more:hover, .side-bar .more-anchor a:hover{
+    color: #2e084d;
+}
+
+.side-bar .side-bar-tags div:not(.my-tag):hover{
+    background-color: #505357;
+    text-decoration: underline;
+    color: #551A8B;
+}
+/*----------------------------------------------------------- */
+
+
+/*-----------------Middle content-----------------------------*/
+.middle-content{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+}
+
+.middle-content .navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+}
+
+.middle-content .navbar ul{
+    padding-top: 6px;
+}
+.middle-content .navbar li{
+    list-style-type: none;
+    display: inline-block;
+    font-size: 1.1rem;
+}
+.middle-content .navbar a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 0 8px;
+}
+
+.middle-content .card{
+    margin-top: 10px;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.541);
+    margin-bottom: 10px;
+    background-color: #161B22;
+}
+.middle-content .card-1 img{
+    max-height: 400px; width: 100%;
+    object-fit: cover;
+}
+
+.middle-content .card-content{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.card .card-content h2{
+    font-size: clamp(1.875rem, 4vw, 2.125rem);
+}
+.card .card-content .profile-info{
+    display: flex;
+    align-items: center;
+    grid-column: 1 / span 2;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.card-content .profile-info img{
+    width: 50px;
+    border-radius: 50%;
+}
+.card-content .profile-info .name{
+    margin-left: 15px;
+}
+
+.card-content .text-content .tags{
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.card-content .text-content{
+    grid-column: 2;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.card-content .audience-interaction{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.card-content .audience-interaction .like-and-comment{
+    display: flex;
+    gap: 30px;
+}
+.card-content .audience-interaction .like-and-comment span{
+    padding-right: 5px;
+}
+.card-content .audience-interaction button{
+    padding: 12px 14px;  
+    border-radius: 3px;
+    border: none;
+    background-color: initial;
+    color: #fff;
+}
+
+.middle-content .navbar .underline{
+    height: 3px;
+    background-color: #6a4cbb;
+    margin-top: 5px;
+}
+.middle-content .navbar .active{
+    font-weight: 800;
+}
+
+.card-content .audience-interaction button:hover{
+    color: black;
+    background-color: #303339;
+}
+
+.audience-interaction .like i:hover{
+    color: red;
+}
+
+.middle-content, .middle-content .navbar li a{
+    color: rgb(201, 200, 200);
+}
+.middle-content h2, .middle-content .active{
+    color: #fff; 
+}
+/* --------------------------------------------------------------- */
+
+/* --------------------Right content----------------------- */
+.right-side-content{
+    display: grid;
+    align-content: start;
+}
+
+.right-side-content .listings{
+    display: grid;
+    grid-template-rows: repeat(auto, 7);
+    align-content: start;
+    gap: 2px;
+    box-shadow: 0 0 1px white;
+    margin: 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.right-side-content .listings .right-content{
+    background-color: #1d1f23;
+    padding: 15px;
+}
+
+.right-side-content .listings .right-content1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.listings .right-content1 a{
+    color: #58a6ff;
+    text-decoration: none;
+}
+.listings .right-content:not(.right-content1) a{
+    color: inherit;
+    text-decoration: none;
+}
+.listings .right-content small{
+    color: rgb(192, 191, 191);
+}
+.listings .right-content a:hover{
+    color: #8e2beb;
+}
+
+.right-side-content .listing-button{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 1px;
+    border-radius: 5px;
+    margin: 0 20px;
+}
+.right-side-content .listing-button button{
+    font-weight: 600;
+    background-color: inherit;
+    border: none;
+    color: #fff;
+    padding: 10px 0;
+    background-color: rgba(0, 128, 128, 0.489);
+    width: 100%;
+    border-radius: 5px;
+}
+.right-side-content .listing-button button:hover{
+    background-color: rgba(0, 67, 67, 0.489);
+}
+
+/*---------------------- Meida queries ---------------*/
+@media(max-width: 950px){
+    .right-side-content{
+        display: none;
+    }
+
+    .container .grid-body{
+        display: grid;
+        grid-template-columns: minmax(200px, 1fr) 2fr;
+        background-color: #0D1117;
+        color: #fff;
+        padding-right: 20px;
+    }
+}
+
+/* You can make the side comtent shrink into a menu at 768px */
+
+
+
+
+
+

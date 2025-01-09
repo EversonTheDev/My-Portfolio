@@ -1,0 +1,161 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: inherit;
+    font-style: normal;
+}
+
+h1{
+    font-family: "Playfair Display", "Georgia", "Times New Roman", serif;
+    font-weight: 700;
+    padding-left: 10%;
+    padding-bottom: 40px;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+.body{
+    padding-left: 20%;
+    margin-bottom: 50px;
+    width: 95%;
+}
+
+select option[disabled]{
+    display: none;
+    color: #a1acb5;
+}
+
+
+.options{
+    display: flex;
+    justify-content: space-between;
+}
+.options > .choice{
+    display: flex;
+    gap: 8px
+}
+
+.choice > div{
+    border: 1.5px solid #1E3A8A;
+    padding: 2px 0;
+    padding-left: .5rem;
+}
+.shoe, .basketball, .men{
+    display: flex;
+    margin: auto 0;
+    gap: .5rem;
+    padding-left: 5px;
+}
+
+.shoe .item-2, .basketball .item-2, .men .item-2{
+   height: 100%;
+   color: blue;
+}
+
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 20px;
+}
+.f-shoe img{
+    width: 100%;
+}
+.flex-container .f-shoe{
+    flex: 1 1 calc(33.33% - 3rem);
+    min-width: 200px;
+    padding: 8px;
+    padding-bottom: 20px;
+}
+
+.shoe-1, .shoe-2, .shoe-3, .shoe-4, .shoe-5, .shoe-6{
+    box-shadow: 0 0 10px -2px grey;
+    padding: 10px;
+}
+
+.f-shoe h3{
+    padding-top: 15px;
+}
+.f-shoe p{
+    padding-top: 10px;
+}
+
+select{
+    padding: 10px;
+    width: 40%;
+}
+
+.f-shoe:hover{
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 2px;
+}
+
+ .form{
+    width: 100%;
+}
+form{
+    display: flex;
+    justify-content: flex-end;
+}  
+
+@media (max-width: 600px){
+    h1{
+        padding-left: 5px;
+    }
+
+    .body{
+        padding-left: 15px;
+    }
+
+    .f-shoe{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex: 1 1 100%;
+    }
+
+    .shoe-1, .shoe-2, .shoe-3, .shoe-4, .shoe-5, .shoe-6{
+        max-width: 50%;
+    }
+
+    .options{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .choice{
+        order: 1;
+        width: 80%;
+        flex-wrap: wrap;
+        padding: 1px;
+        
+    }
+
+    .form, form{
+        width: 100%;
+        flex-shrink: 0;
+        justify-content: flex-start;
+    }
+    select{
+        width: 80%;
+    } 
+     
+
+}
+
+@media (max-width: 992px){
+    h1{
+        padding-left: 20px;
+    }
+
+    .body{
+        padding-left: 60px;
+    }
+
+    select{
+        width: 45%;
+    }
+}

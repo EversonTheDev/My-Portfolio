@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.container{
+    background-color: #1B5E20;
+    color: white;
+    padding: 10px;
+    width: min(80%, 400px);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.container > h2, .log-in-form h2{
+    text-align: center;
+    font-size: 2.1em;
+    margin-bottom: 22px;
+    color: white;
+}
+
+.container input, .container button{
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.container button{
+    background-color: #FFED00;
+    color: black;
+}
+
+.container button:hover{
+    background-color: #eae271;
+}
+
+p{
+    text-align: center;
+    margin: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #68c1f4;
+}
+
+
+
+.log-in-form{
+    background-color: #1B5E20;
+    width: min(80%, 400px);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.log-in-form input, .log-in-form button{
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 8px;
+    margin: 8px 0;
+    outline: none;
+}
+
+.log-in-form button{
+    font-family: Helvetica, Arial, sans-serif;
+    width: 40%;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 20px auto;
+    display: block;
+    background-color: #FFED00;
+}
+
+.log-in.password{
+    margin-top: 20px;
+}
+.log-in > label{
+    font-size: 1.2rem;
+}
+
+.log-in-form button:hover{
+    scale:1.1;
+}
+
+input
